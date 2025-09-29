@@ -27,7 +27,7 @@ const MenuNavbar = ({ isOpen, closeModal }: MenuNavbarProps) => {
         <BsX size={28} className="cursor-pointer" onClick={closeModal} />
       </div>
 
-      {/* Nav links */}
+      {/* home */}
       <div className="flex flex-1 flex-col gap-4">
         <Link href={`/home`} onClick={closeModal}>
           <div
@@ -49,6 +49,7 @@ const MenuNavbar = ({ isOpen, closeModal }: MenuNavbarProps) => {
           </div>
         </Link>
 
+        {/* locations */}
         <Link href={`/locations`} onClick={closeModal}>
           <div
             className={`flex items-center gap-3 px-3 py-3 ${
@@ -71,6 +72,7 @@ const MenuNavbar = ({ isOpen, closeModal }: MenuNavbarProps) => {
           </div>
         </Link>
 
+        {/* settings */}
         <Link href={`/settings`} onClick={closeModal}>
           <div
             className={`flex items-center gap-3 px-3 py-3 ${
@@ -105,7 +107,6 @@ const MenuNavbar = ({ isOpen, closeModal }: MenuNavbarProps) => {
             <p className="text-[#575E67] text-[14px]">Accountant</p>
           </div>
         </div>
-
         {/* log out */}
         <div className="flex items-center justify-center gap-2 cursor-pointer py-7">
           <FiLogOut size={20} color="#111A4A" />

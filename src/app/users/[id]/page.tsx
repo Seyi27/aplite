@@ -15,12 +15,13 @@ const UserDetails = ({ params }: UserDetailsProps) => {
   const router = useRouter();
   const { id } = React.use(params);
 
-  const {connectionsList, loading, error} = useConnectionsList() // destructuring the hook
+  const { connectionsList, loading, error } = useConnectionsList(); // destructuring the hook
 
   const connectionUser = connectionsList.find((item) => item.id === id);
 
   return (
     <div>
+      {/* Back to Home */}
       <button
         onClick={() => router.push(`/home`)}
         className="flex items-center gap-2 h-[32px] border-1 border-[#ADADAD] px-2 rounded-sm text-[14px] font-bold text-[#2D2D2D] cursor-pointer px-5"
@@ -28,6 +29,7 @@ const UserDetails = ({ params }: UserDetailsProps) => {
         <BsChevronLeft /> Back to Home
       </button>
 
+      {/* User details */}
       <div className="w-full flex flex-col items-center bg-white rounded-sm border-1 border-[#F1F1F1] py-10 px-5 mt-5">
         {loading ? (
           <TailSpin
