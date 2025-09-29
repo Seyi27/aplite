@@ -1,8 +1,10 @@
 "use client";
+import { useToast } from "@/app/context/ToastContext";
 import { ConnectionListType } from "@/types/connectionList";
 import React, { useEffect, useState } from "react";
 
 const useConnectionsList = () => {
+  const { showToast } = useToast();
   const [connectionsList, setConnectionsList] = useState<ConnectionListType[]>(
     []
   );
@@ -21,6 +23,10 @@ const useConnectionsList = () => {
         setConnectionsList(data);
       } catch {
         setError(true);
+        showToast(
+          "Check your internet connection. Please try again later...",
+          "error"
+        );
       } finally {
         setLoading(false);
       }

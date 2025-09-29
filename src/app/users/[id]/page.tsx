@@ -67,7 +67,7 @@ const UserDetails = ({ params }: UserDetailsProps) => {
             </div>
 
             <div>
-              <button className="flex items-center justify-center gap-2 w-[150px] h-[32px] px-2 rounded-sm text-[14px] font-bold bg-[#111A4A] text-white">
+              <button className="flex items-center justify-center gap-2 w-[150px] h-[32px] px-2 rounded-sm text-[14px] font-bold bg-[#111A4A] text-white cursor-pointer">
                 <BsPersonPlus size={15} />
                 Connect
               </button>

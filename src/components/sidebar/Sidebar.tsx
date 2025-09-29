@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import { BsChevronExpand, BsGeo, BsGeoAlt, BsGrid } from "react-icons/bs";
@@ -18,6 +18,7 @@ const Sidebar = () => {
       </div>
 
       <div className="flex-1 flex flex-col items-center gap-3 mt-5">
+        {/* Home */}
         <Link href={`/home`} className="w-[190px]">
           <div
             className={`flex items-center gap-3 px-3 py-3 ${
@@ -38,6 +39,7 @@ const Sidebar = () => {
           </div>
         </Link>
 
+        {/* locations */}
         <Link href={`/locations`} className="w-[190px]">
           <div
             className={`flex items-center gap-3 px-3 py-3 ${
@@ -60,6 +62,7 @@ const Sidebar = () => {
           </div>
         </Link>
 
+        {/* settings */}
         <Link href={`/settings`} className="w-[190px]">
           <div
             className={`flex items-center gap-3 px-3 py-3 ${
@@ -83,8 +86,9 @@ const Sidebar = () => {
         </Link>
       </div>
 
+      {/* 2025 Aplite */}
       <div className="text-center border-t border-t-[#E7E6E9] pt-5">
-        <p className="text-[#767676]">@ 2025 Aplite</p>
+        <p className="text-[#767676] text-[14px]">@ 2025 Aplite</p>
       </div>
     </div>
   );
